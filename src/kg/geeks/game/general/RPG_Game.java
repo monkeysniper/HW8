@@ -6,17 +6,19 @@ import java.util.Random;
 
 public class RPG_Game {
     public static Random random = new Random();
-    private static int roundNumber;
+    public static int roundNumber;
 
     public static void startGame() {
         Boss boss = new Boss(1000, 50, "Saruman");
         Warrior warrior1 = new Warrior(290, 10, "Bob");
         Warrior warrior2 = new Warrior(280, 20, "James");
-        Magic magic = new Magic(270, 20, "Anton");
+        Magic magic = new Magic(270, 20, "Anton",55);
         Berserk berserk = new Berserk(260, 15, "Ragnar");
         Medic doc = new Medic(250, "Alex", 15);
+        Bomber bomber=new Bomber(100,40,"Kairat");
         Medic assistant = new Medic(320, "Sultan", 5);
-        Hero[] heroes = {warrior1, doc, magic, warrior2, berserk, assistant};
+        Samurai samurai = new Samurai(250, 10, "Kenzo");
+        Hero[] heroes = {warrior1, doc, magic, warrior2, berserk, assistant,bomber,samurai};
 
         printStatistics(boss, heroes);
         while (!isGameOver(boss, heroes)) {
@@ -24,7 +26,7 @@ public class RPG_Game {
         }
     }
 
-    private static void playRound(Boss boss, Hero[] heroes) {
+    public static void playRound(Boss boss, Hero[] heroes) {
         roundNumber++;
         boss.chooseDefence();
         for (Hero hero : heroes) {

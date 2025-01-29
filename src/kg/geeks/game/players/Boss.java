@@ -37,4 +37,9 @@ public class Boss extends GameEntity implements Fighter {
     public String toString() {
         return super.toString() + " defence: " + defence;
     }
+
+    @Override
+    protected int setHealth() {
+        return 0;
+    }
 }

@@ -40,4 +40,6 @@ public abstract class GameEntity {
         return super.getClass().getSimpleName() + " " + this.name
                 + " health: " + this.health + " damage: " + this.damage;
     }
+
+    protected abstract int setHealth();
 }

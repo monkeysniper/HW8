@@ -7,6 +7,11 @@ public class Berserk extends Hero implements Fighter {
         super(health, damage, name, SuperAbility.BLOCK_AND_REVERT);
     }
 
+    @Override
+    protected int setHealth() {
+        return 0;
+    }
+
     public int getBlockedDamage() {
         return blockedDamage;
     }

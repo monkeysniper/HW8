@@ -16,4 +16,9 @@ public class Medic extends Hero {
             }
         }
     }
+
+    @Override
+    protected int setHealth() {
+        return 0;
+    }
 }

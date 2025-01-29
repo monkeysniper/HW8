@@ -4,5 +4,9 @@ public enum SuperAbility {
     CRITICAL_DAMAGE,
     BOOST,
     HEAL,
-    BLOCK_AND_REVERT
+    BLOCK_AND_REVERT,
+    CHIKIBAMBONI,
+    HARAK,
+    GAG
+
 }

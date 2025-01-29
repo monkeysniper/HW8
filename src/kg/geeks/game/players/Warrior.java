@@ -8,6 +8,11 @@ public class Warrior extends Hero implements Fighter {
     }
 
     @Override
+    protected int setHealth() {
+        return 0;
+    }
+
+    @Override
     public void attack(GameEntity entity) {
         entity.setHealth(entity.getHealth() - this.getDamage());
     }
